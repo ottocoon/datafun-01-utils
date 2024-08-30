@@ -1,5 +1,6 @@
 ''' ITERATION 5 add stats
 Module: Coons Toons- Reusable Module for My Data Analytics Projects
+This tool shows the key statistics for the client satisfaction and IMBD scores for a film by the company Coons Toons.
 
 This module provides a simple, reusable foundation for my analytics projects. 
 When we work hard to write useful code, we want it to be reusable.
@@ -31,13 +32,24 @@ sequal_number: int=4
 is_animated: bool=True
 theaters: list=["AMC","Cinamark"]
 imbd: list =[6.7,6,7,8.5]
+client_sat: list= [4,7,10]
+
+
+min_sat: float = min(client_sat)
+max_sat: float = max(client_sat)
+sat_stdev: float = stat.stdev(client_sat)
+mean_sat: float = stat.mean(client_sat)
 
 min_imbd: float = min(imbd)
 max_imbd: float = max(imbd)
 imbd_stdev: float = stat.stdev(imbd)
 mean_imbd: float = stat.mean(imbd)
 
-byline: str = f"""The new movie by Coons Toons is the {sequal_number} sequal, is showing in the following theaters, {theaters} and received the follwoing scores on imbd: {imbd}. Is it animated? {is_animated}
+byline: str = f"""
+The following are the key statistics for the client satisfaction: 
+Min:{min_sat}, Max:{max_sat}, Standard Devation{sat_stdev}, Mean:{mean_sat}
+The following are the key statistics for IMBD scores: 
+Min:{min_imbd}, Max:{max_imbd}, Standard Devation{imbd_stdev}, Mean:{mean_imbd}
 """
 
 #####################################
