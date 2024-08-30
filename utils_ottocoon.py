@@ -1,5 +1,4 @@
-''' ITERATION 3 Mulitple Byline
-
+''' ITERATION 5 add stats
 Module: Coons Toons- Reusable Module for My Data Analytics Projects
 
 This module provides a simple, reusable foundation for my analytics projects. 
@@ -23,7 +22,7 @@ Here's what a first draft of my utils_case.py might look like:
 
 I'll test it in an online interpreter to ensure this version runs correctly before continuing.
 '''
-
+import statistics as stat
 #####################################
 # Declare a global variable named byline.
 #####################################
@@ -31,7 +30,12 @@ I'll test it in an online interpreter to ensure this version runs correctly befo
 sequal_number: int=4
 is_animated: bool=True
 theaters: list=["AMC","Cinamark"]
-imbd: list =[6.7,6]
+imbd: list =[6.7,6,7,8.5]
+
+min_imbd: float = min(imbd)
+max_imbd: float = max(imbd)
+imbd_stdev: float = stat.stdev(imbd)
+mean_imbd: float = stat.mean(imbd)
 
 byline: str = f"""The new movie by Coons Toons is the {sequal_number} sequal, is showing in the following theaters, {theaters} and received the follwoing scores on imbd: {imbd}. Is it animated? {is_animated}
 """
