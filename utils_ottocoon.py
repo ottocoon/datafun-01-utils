@@ -1,4 +1,4 @@
-''' ITERATION 2
+''' ITERATION 3 Mulitple Byline
 
 Module: Coons Toons- Reusable Module for My Data Analytics Projects
 
@@ -28,7 +28,13 @@ I'll test it in an online interpreter to ensure this version runs correctly befo
 # Declare a global variable named byline.
 #####################################
 
-byline: str = 'Coons Toons'
+sequal_number: int=4
+is_animated: bool=True
+theaters: list=["AMC","Cinamark"]
+imbd: list =[6.7,6]
+
+byline: str = f"""The new movie by Coons Toons is the {sequal_number} sequal, is showing in the following theaters, {theaters} and received the follwoing scores on imbd: {imbd}. Is it animated? {is_animated}
+"""
 
 #####################################
 # Define a main() function for this module.
